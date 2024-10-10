@@ -17,15 +17,15 @@ function App() {
           {count}
         </p>
         <div className="button-group">
-          <button className="button increment" onClick={increment}>
-            Increment
-          </button>
           <button 
             className={`button decrement ${count === 0 ? 'disabled' : ''}`} 
             onClick={decrement}
             disabled={count === 0}
           >
             Decrement
+          </button>
+          <button className="button increment" onClick={increment}>
+            Increment
           </button>
         </div>
         {count === 0 && <p className="error-message">Cannot decrement below 0</p>}
