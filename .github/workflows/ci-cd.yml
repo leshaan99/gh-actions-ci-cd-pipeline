@@ -1,9 +1,10 @@
-name: Build and Push Docker Image to Docker Hub
+name: CI/CD Pipeline
 
 on: workflow_dispatch
 
 jobs:
-  build:
+  push-to-dockerhub:
+    name: Push the image to dockerhub
     runs-on: ubuntu-latest
 
     steps:
@@ -25,3 +26,8 @@ jobs:
         context: .
         push: true
         tags: leshaan99/counter-app:latest
+
+  push-to-ec2:
+    needs: push-to-dockerhub
+    name: Deploy using ec2
+    runs-on: ubuntu-latest
