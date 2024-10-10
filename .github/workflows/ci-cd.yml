@@ -4,7 +4,6 @@ on: workflow_dispatch
 
 jobs:
   push-to-dockerhub:
-    name: Push the image to dockerhub
     runs-on: ubuntu-latest
 
     steps:
