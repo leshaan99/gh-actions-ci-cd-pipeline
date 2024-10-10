@@ -28,5 +28,4 @@ jobs:
 
   push-to-ec2:
     needs: push-to-dockerhub
-    name: Deploy using ec2
     runs-on: ubuntu-latest
