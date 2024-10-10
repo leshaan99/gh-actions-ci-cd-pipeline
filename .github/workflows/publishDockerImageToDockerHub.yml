@@ -24,4 +24,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: gaveenbuddhika/foodapp:latest
+        tags: leshaan99/counter-app:latest
