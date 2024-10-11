@@ -26,6 +26,9 @@ jobs:
         push: true
         tags: leshaan99/counter-app:latest
 
+    - name: Log out from Docker Hub
+      run: docker logout
+
   push-to-ec2:
     needs: push-to-dockerhub
     runs-on: ubuntu-latest
