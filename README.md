@@ -16,5 +16,5 @@ Pull the latest Docker image
 docker pull leshaan99/counter-app:latest
 ```
 
-Access the public link to my EC2 instance here: [Your EC2 Instance Link](http://13.60.76.110:3000/)
+To access your EC2 instance: [counter-app](http://13.60.76.110:3000/)
 
