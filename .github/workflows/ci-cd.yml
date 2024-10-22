@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Pull image from the docker hub
         # Pulls the latest version of the Docker image
-        run: docker full leshaan99/counter-app:latest
+        run: docker pull leshaan99/counter-app:latest
       - name: Delete old container
         # Removes any existing container named 'reactContainer'
         run: docker rm -f reactContainer
