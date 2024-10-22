@@ -42,4 +42,17 @@ jobs:
 
   deploy-to-ec2:
     needs: build-and-push
+    # The job is executed on an AWS EC2 instance
     runs-on: aws-ec2
+    steps:
+      - name: Pull image from the docker hub
+        # Pulls the latest version of the Docker image
+        run: docker full leshaan99/counter-app:latest
+      - name: Delete old container
+        # Removes any existing container named 'reactContainer'
+        run: docker rm -f reactContainer
+      - name: Run the docker container
+        # Runs a new Docker container from the pulled image in detached mode
+        # mapping port 3000 of the container to port 3000 of the EC2 instance
+        # Names the container 'reactContainer'
+        run: docker run -d -p 3000:3000 --name reactContainer leshaan99/counter-app
