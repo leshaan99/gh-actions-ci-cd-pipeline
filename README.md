@@ -15,6 +15,3 @@ Pull the latest Docker image
 ```bash
 docker pull leshaan99/counter-app:latest
 ```
-
-To access your EC2 instance: [counter-app](http://13.60.76.110:3000/)
-
